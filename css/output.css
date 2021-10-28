@@ -69,13 +69,13 @@ section > div p {
 header {
   z-index: 10;
   width: 100%;
-  padding: 10px 60px;
+  padding: 10px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  background: rgba(11, 186, 174, 0.9);
+  background: rgba(0, 190, 204, 0.7);
 }
 @media (min-width: 480px) {
   header {
@@ -84,7 +84,7 @@ header {
   }
 }
 header .logo {
-  height: 40px;
+  height: 60px;
   width: 240px;
   margin-left: auto;
   margin-right: auto;
@@ -109,15 +109,22 @@ header nav {
   height: 40px;
   display: block;
   text-align: center;
+  width: 100%;
   z-index: 99;
 }
 @media (min-width: 480px) {
   header nav {
     text-align: right;
+    width: auto;
   }
 }
 header nav .nav-icons {
-  display: flex;
+  display: inline-flex;
+}
+@media (min-width: 480px) {
+  header nav .nav-icons {
+    display: flex;
+  }
 }
 header nav .nav-icons ul.nav-links {
   display: flex;
@@ -139,7 +146,7 @@ header nav .nav-icons ul.nav-links li svg {
   height: 30px;
 }
 header nav .nav-icons ul.nav-links li svg path.cls-1 {
-  fill: #ff598f;
+  fill: #003f33;
   transition: 0.3s;
 }
 header nav .nav-icons ul.nav-links li svg path.cls-2 {
@@ -176,7 +183,7 @@ header nav .nav-icons #burger-icon svg path.cls-1 {
 }
 @media (min-width: 480px) {
   header nav .nav-icons #burger-icon svg path.cls-1 {
-    fill: #ddd;
+    fill: #fff;
   }
 }
 header nav .nav-icons #burger-icon:hover {
@@ -187,7 +194,7 @@ header nav .nav-icons #burger-icon:hover svg path.cls-1 {
 }
 header ul.burger-menu {
   margin-top: 4px;
-  background: #3f1523;
+  background: #00263f;
   overflow: hidden;
   transform: scaleY(0);
   transform-origin: top;
@@ -196,10 +203,10 @@ header ul.burger-menu {
 }
 @media (min-width: 480px) {
   header ul.burger-menu {
-    margin-top: 18px;
+    margin-top: 27px;
     display: inline-flex;
     flex-direction: column;
-    background: rgba(63, 21, 35, 0.8);
+    background: rgba(0, 38, 63, 0.8);
   }
 }
 header ul.burger-menu li {
@@ -217,8 +224,9 @@ header ul.burger-menu li a:before {
   width: 100%;
   height: 2px;
   bottom: 0;
+  margin-bottom: -6px;
   left: 0;
-  background-color: #fff;
+  background-color: #00becc;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
@@ -232,7 +240,7 @@ header ul.burger-menu.open {
 }
 
 .main {
-  margin-top: -80px;
+  margin-top: -140px;
 }
 
 .hero {
@@ -274,17 +282,22 @@ header ul.burger-menu.open {
 }
 .hero .overlay {
   position: absolute;
-  top: 25%;
-  background: rgba(0, 0, 0, 0.4);
+  top: 33%;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 30px;
+  background: rgba(217, 217, 217, 0.7);
   font-family: "Roboto Condensed";
   font-size: 36px;
-  padding: 40px;
   text-align: center;
   text-transform: uppercase;
 }
 @media (min-width: 480px) {
   .hero .overlay {
+    margin-left: auto;
+    margin-right: auto;
     top: 35%;
+    padding: 40px;
   }
 }
 .hero .overlay .huge {
@@ -293,14 +306,14 @@ header ul.burger-menu.open {
   font-weight: bold;
 }
 .hero .overlay p {
-  color: #fff;
+  color: #222;
 }
 .hero .overlay button {
   height: 60px;
   padding: 16px;
   background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #000;
+  border: 2px solid #dedede;
   font-family: "Roboto";
   font-size: 21px;
   text-transform: uppercase;
@@ -308,7 +321,25 @@ header ul.burger-menu.open {
 }
 .hero .overlay button:hover {
   cursor: pointer;
-  background-color: #111;
+  background-color: #ddd;
+}
+.hero .overlay button div {
+  position: relative;
+}
+.hero .overlay button div:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -6px;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+.hero .overlay button:hover div:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 .hero #scroll-arrow {
   position: absolute;
@@ -319,13 +350,14 @@ header ul.burger-menu.open {
   height: 50px;
 }
 .hero #scroll-arrow svg path.cls-2 {
+  fill: #00becc;
   transition: 0.3s;
 }
 .hero #scroll-arrow:hover {
   cursor: pointer;
 }
 .hero #scroll-arrow:hover svg path.cls-2 {
-  fill: #3f1523;
+  fill: #003f33;
 }
 .hero h1 {
   font: bold 60px "Open Sans", sans-serif;
@@ -340,7 +372,7 @@ header ul.burger-menu.open {
 }
 
 .features {
-  background-color: #003f39;
+  background-color: #00263f;
   padding: 40px;
 }
 @media (min-width: 480px) {
@@ -382,7 +414,7 @@ header ul.burger-menu.open {
   width: 100%;
   height: 50px;
   padding: 12px;
-  background-color: #ff598f;
+  background-color: #00becc;
   color: #fff;
   border: 0;
   font-family: "Roboto Condensed";
@@ -394,7 +426,7 @@ header ul.burger-menu.open {
 }
 .features .grid .featured-item button:hover {
   cursor: pointer;
-  background-color: #3f1523;
+  background-color: #003f33;
 }
 
 .welcome {
@@ -407,7 +439,7 @@ header ul.burger-menu.open {
   }
 }
 .welcome .title {
-  color: #003f39;
+  color: #00263f;
   position: relative;
 }
 .welcome .title:after {
@@ -417,7 +449,7 @@ header ul.burger-menu.open {
   bottom: -4px;
   left: 0;
   width: 64px;
-  background: #0bb7ba;
+  background: #00becc;
 }
 .welcome .grid .panel-l {
   background-color: #fff;
@@ -434,7 +466,7 @@ header ul.burger-menu.open {
   margin-right: 28px;
 }
 .welcome .grid .panel-l h4.highlight {
-  color: #ff598f;
+  color: #00becc;
 }
 .welcome .grid .panel-l p {
   line-height: 1.5;
@@ -475,7 +507,7 @@ header ul.burger-menu.open {
 }
 .location .grid .panel-r {
   flex-basis: 60%;
-  background-color: #3f1523;
+  background-color: #003f33;
   color: #fff;
   text-align: center;
   display: flex;
@@ -513,7 +545,7 @@ header ul.burger-menu.open {
   bottom: -4px;
   left: 0;
   width: 64px;
-  background: #ff598f;
+  background: #00becc;
 }
 .location .grid .panel-r div p {
   color: #fff;
@@ -535,8 +567,25 @@ header ul.burger-menu.open {
   }
 }
 .location .grid .panel-r div button:hover {
-  background-color: #2c0f18;
   cursor: pointer;
+}
+.location .grid .panel-r div button div {
+  position: relative;
+}
+.location .grid .panel-r div button div:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  background-color: #fff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+.location .grid .panel-r div button:hover div:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 footer {
@@ -575,11 +624,11 @@ footer > div .logo p {
   }
 }
 footer > div .logo img {
-  width: 80%;
+  width: 100%;
 }
 @media (min-width: 480px) {
   footer > div .logo img {
-    width: auto;
+    width: 250px;
     margin-right: 60px;
   }
 }

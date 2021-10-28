@@ -11,9 +11,10 @@ window.onload = function () {
 
 //image slider stuff
 var imageSet = [
-  "img/hero_image_one.jpg",
-  "img/hero_image_two.jpg",
-  "img/hero_image_three.jpg",
+  "img/hero_image_1.jpg",
+  "img/hero_image_2.jpg",
+  "img/hero_image_3.jpg",
+  "img/hero_image_4.jpg",
 ];
 var index = 0;
 var imageToggle = false;
